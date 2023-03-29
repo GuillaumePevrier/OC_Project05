@@ -150,7 +150,8 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+          index = i - 1 ;
+          // Ajout de la valeur -1 pour modifier la variable index de navigation
         }
       });
       next =
@@ -189,7 +190,8 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          index = i + 1;
+          // Ajout de la valeur +1 pour modifier la variable index de navigation
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
@@ -236,28 +238,30 @@
       }
     },
     filterByTag() {
-      if ($(this).hasClass("active-tag")) {
-        return;
-      }
-      $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
-
-      var tag = $(this).data("images-toggle");
-
-      $(".gallery-item").each(function() {
-        $(this)
-          .parents(".item-column")
-          .hide();
-        if (tag === "all") {
-          $(this)
-            .parents(".item-column")
-            .show(300);
-        } else if ($(this).data("gallery-tag") === tag) {
-          $(this)
-            .parents(".item-column")
-            .show(300);
+          if ($(this).hasClass("active-tag")) {
+            return;
+          }
+          $(".active.active-tag").removeClass("active active-tag");
+          $(this).addClass("active-tag active");
+          // Mise à jour de la class active pour que le focus des bouttons du filtre
+          //de catégorie apparaisse.
+    
+          var tag = $(this).data("images-toggle");
+    
+          $(".gallery-item").each(function() {
+            $(this)
+              .parents(".item-column")
+              .hide();
+            if (tag === "all") {
+              $(this)
+                .parents(".item-column")
+                .show(300);
+            } else if ($(this).data("gallery-tag") === tag) {
+              $(this)
+                .parents(".item-column")
+                .show(300);
+            }
+          });
         }
-      });
-    }
-  };
-})(jQuery);
+      };
+    })(jQuery);
