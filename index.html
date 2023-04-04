@@ -14,65 +14,19 @@
 	<script src="./assets/scripts.js"></script>
 	<meta name="description" content="Découvrez le travail de Nina Carducci, photographe professionnelle basée à Paris. Portraits, événements, reportages, etc. Contactez-nous dès maintenant pour réserver votre séance photo.">
 	<meta name="keywords" content="photographe, portrait, événementiel, Paris, Nina Carducci, reportage, séance photo, galerie, service, contact, Instagram, professionnelle, images, mariage, entreprise, artistique, artiste, photos, noir et blanc, couleur">
+	<meta property="og:type" content="website" />
+	<meta property="og:instagram" content="instagram" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:url" content="https://www.instagram.com/ninacarducci.photo/?hl=fr" />
 	</head>
-	<title>Nina Carducci - Photographe portraits & événementiel à BORDEAUX</title>
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "Nina Carducci",
-		"jobTitle": "Photographe professionnelle",
-		"url": "https://nina-carducci.github.io/",
-		"description": "Photographe professionnelle basée à Bordeaux",
-		"sameAs": "https://www.instagram.com/ninacarducci.photo/?hl=fr",
-		"contactPoint": {
-			"@type": "ContactPoint",
-			"telephone": "+33-5-56-67-78-89",
-			"contactType": "Gérante",
-			"areaServed": "FR",
-			"availableLanguage": "French",
-			"email": "mailto:contact@ninacarducci.com"
-		},
-		"hasMap": {
-			"@context": "https://schema.org",
-			"@type": "Map",
-			"name": "Bordeaux",
-			"url": "https://www.openstreetmap.org/search?query=68%20avenue%20Alsace-Lorraine%2033200#map=13/44.8407/-0.6390"
-		},
-		"address": {
-			"@context": "https://schema.org",
-			"@type": "PostalAddress",
-			"addressLocality": "Bordeaux",
-			"streetAddress": "68 avenue Alsace-Lorraine",
-			"postalCode": "33200",
-			"addressCountry": {
-				"@type": "Country",
-				"name": "France"
-			}
-		},
-		"openingHoursSpecification": [
-			{
-				"@type": "OpeningHoursSpecification",
-				"dayOfWeek": [
-					"http://schema.org/Monday",
-					"http://schema.org/Tuesday",
-					"http://schema.org/Wednesday",
-					"http://schema.org/Thursday",
-					"http://schema.org/Friday"
-				],
-				"opens": "10:00",
-				"closes": "19:00"
-			}
-		]
-	}
-
-	</script>
+	<title itemprop="headline">Nina Carducci - Photographe portraits & événementiel à BORDEAUX</title>
+	
 
 </head>
 <body>
 <header>
 <div class="top-header">
-	<h1 class="name">Nina Carducci</h1>
+	<h1 class="name" itemprop="name">Nina Carducci</h1>
 	<nav class="nav">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
@@ -116,11 +70,11 @@
 <main>
 <div id="about">
 	<div class="picture left">
-		<img src="./assets/images/nina.webp" alt="Photographie de Nina Carducci"  width="100%" height="auto">
+		<img itemprop="image" itemscope itemtype="http://schema.org/ImageObject" src="./assets/images/nina.webp" alt="Photographie de Nina Carducci"  width="100%" height="auto">
 	</div>
 	<div id="about-me">
 		<h2 class="about-me__title">A propos de moi</h2>
-		<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
+		<h3 class="about-me__introduction" itemprop="description">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
 		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
@@ -209,7 +163,7 @@
 			</form>
 		</div>
 		<div class="picture right">
-			<img src="./assets/images/camera.webp" alt="Photographie d'un appareil photo" width="100%" height="auto">
+			<img src="./assets/images/camera.webp" alt="Photographie d'un appareil photo" width="100%" height="auto" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
 		</div>
 	</div>
 </div>
@@ -218,5 +172,33 @@
   <p >Copyright © Nina Carducci - 
   <a href="https://guillaumepevrier.github.io/OC_Project05">Mentions légales</a></p>
 </footer>
+	<script type='application/ld+json'>
+	{
+	  "@context": "http://www.schema.org",
+	  "@type": "ProfessionalService",
+	  "name": "Photographe",
+	  "url": "https://nina-carducci.github.io",
+	  "logo": "https://nina-carducci.github.io/assets/images/nina.png",
+	  "priceRange": "€€",
+	  "image": "https://nina-carducci.github.io/assets/images/nina.png",
+	  "description": "Découvrez le travail de Nina Carducci, photographe professionnelle basée à Paris. Portraits, événements, reportages, etc. Contactez-nous dès maintenant pour réserver votre séance photo.",
+	  "address": {
+		 "@type": "PostalAddress",
+		 "streetAddress": "68 avenue Alsace-Lorraine",
+		 "addressLocality": "Bordeaux",
+		 "addressRegion": "Nouvelle-Aquitaine",
+		 "postalCode": "33200",
+		 "addressCountry": "FR"
+	  },
+	  "geo": {
+		 "@type": "GeoCoordinates",
+		 "latitude": "44,846687",
+		 "longitude": "-0,60659"
+	  },
+	  "hasMap": "https://www.google.com/maps/place/68+Av.+Alsace+Lorraine,+33200+Bordeaux/@44.8465743,-0.6087253,17z/data=!3m1!4b1!4m6!3m5!1s0xd54d803d3494ff1:0x775d19897dd6276f!8m2!3d44.8465743!4d-0.6065366!16s%2Fg%2F11c15dhy_v",
+	   "openingHours": "Mo 10:00-19:00 Tu 10:00-19:00 We 10:00-19:00 Th 10:00-19:00 Fr 10:00-19:00",
+	  "telephone": "0556677889"
+	}
+	</script>
 </body>
 </html>
